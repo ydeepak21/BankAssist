@@ -1,0 +1,63 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: card issue path 1
+  steps:
+  - intent: cards_related
+  - action: action_card_related
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: security_issue_path_1
+  steps:
+  - intent: security_related
+  - action: action_security_related
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: account_opening_path_1
+  steps: 
+  - intent: account_opening
+  - action: utter_documents_required
+  - action: action_account_create
+
+- story: account_support
+  steps: 
+  - intent: accounts_support
+  - action: utter_welcome
+  - action: action_account_support
+
+- story: loan_process
+  steps: 
+  - intent: loan_department
+  - action: action_loan_support

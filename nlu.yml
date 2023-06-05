@@ -1,0 +1,169 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: cards_related
+  examples: |
+    - [atm card]{"entity":"card", "value":"atm card"} [lost]{"entity":"issue", "value":"lost"}
+    - [debit card]{"entity":"card", "value":"debit card"} [lost]{"entity":"issue", "value":"lost"}
+    - [credit card]{"entity":"card", "value":"credit card"} [lost]{"entity":"issue", "value":"lost"}
+    - [card]{"entity":"card", "value":"card"} [damaged]{"entity":"issue", "value":"damaged"}
+    - [atm]{"entity":"card", "value":"atm"} [stolen]{"entity":"issue", "value":"stolen"}
+    - [broke]{"entity":"issue", "value":"broke"} atm card
+    - card is [expired]{"entity":"issue", "value":"expired"}
+    - atm card is [blocked]{"entity":"issue", "value":"blocked"}
+    - what is card [withdrawal limit]{"entity":"range", "value":"withdrawal limit"}
+    - what is [daily limit]{"entity":"range", "value":"daily limit"}
+    - atm [pin]{"entity":"pin", "value":"pin"} number [forgotten]{"entity":"issue", "value":"forgotten"}
+    - atm is [not working]{"entity":"issue", "value":"not working"}
+    - how to [change]{"entity":"issue", "value":"change"} atm pin number
+    - [renew]{"entity":"issue", "value":"renew"} atm card
+    - how to [get new]{"entity":"issue", "value":"get new"} atm card
+    - What are [different] {"entity":"cardvariety", "value":"different"} card available?
+    - cards [options]{"entity":"cardvariety", "value":"options"} available?
+
+- intent: security_related
+  examples: |
+    - how to [verify]{"entity":"security", "value":"verify"} my mobile number?
+    - how to verify my email id?
+    - Can anyone [receive]{"entity":"security", "value":"receive"} ATM on my behalf?
+    - can anyone [collect]{"entity":"security", "value":"collect"} cheque book for me?
+    - can I [share]{"entity":"security", "value":"share"} my ATM pin to others?
+
+- intent: account_opening
+  examples: |
+    - how to create account?
+    - how to open account?
+    - how to open [savings]{"entity":"types", "value":"savings"} account?
+    - how to open [saving]{"entity":"types", "value":"saving"} account?
+    - create [current]{"entity":"types", "value":"current"} account?
+    - things required to open account?
+    - create new account
+    - how can I register new account?
+    - how to create account [online]{"entity":"mode", "value":"online"}
+
+- intent: accounts_support
+  examples: |
+    - benefit for account
+    - benefits opening account
+    - [interest]{"entity":"service", "value":"interest"}
+    - interest rate
+    - service available
+    - services available
+    - fixed deposit {"entity":"service", "value":"fixed deposit"}
+    - rate{"entity":"service", "value":"rate"}
+    - [locker]{"entity":"service", "value":"locker"} service 
+    - gold locker benefit
+    - accounts types
+    - [mobile banking]{"entity":"service", "value":"mobile banking"} facility
+    - [netbanking]{"entity":"service", "value":"netbanking"} facilities
+    - [internet banking]{"entity":"service", "value":"internet banking"} service
+    - [sms banking]{"entity":"service", "value":"sms banking"} service
+    - welcome kit
+
+- intent: loan_department
+  examples: |
+    - how to get [loan]{"entity":"loan","value":"loan"} from bank?
+    - loan from bank
+    - [criteria]{"entity":"measure", "value":"criteria"} for bank loan
+    - [eligible]{"entity":"measure", "value":"eligible"} for bank loan
+    - [documents]{"entity":"measure", "value":"documents"} for loan requirement
+    - [agriculture]{"entity":"loan","value":"agriculture"} loan
+    - [car]{"entity":"loan","value":"car"} loan
+    - [four wheeler]{"entity":"loan","value":"four wheeler"} loan
+    - [home]{"entity":"loan","value":"home"} loan
+    - [bike]{"entity":"loan","value":"bike"} loan
+    - [two wheeler]{"entity":"loan","value":"two wheeler"} loan
+    - [business]{"entity":"loan","value":"business"} loan
+    - how to apply for [education]{"entity":"loan","value":"education"} loan?
+    - [personal]{"entity":"loan","value":"personal"} loan
+    - can [repay]{"entity":"loan","value":"repay"} loan [earlier]{"entity":"time","value":"earlier"}?
+    - mode of repay for loan
